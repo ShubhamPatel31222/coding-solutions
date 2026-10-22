@@ -1,38 +1,22 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
+public class Solution {
 
-
-class Solution{
-    public static void main(String []argh)
-    {
-
-
-
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
         Scanner sc = new Scanner(System.in);
-        int t=sc.nextInt();
-
-        for(int i=0;i<t;i++)
-        {
-
-            try
-            {
-                long x=sc.nextLong();
-                System.out.println(x+" can be fitted in:");
-                if(x>=-128 && x<=127)System.out.println("* byte");
-                //Complete the code
-                if(x>=-32768 && x<=32767)System.out.println("* short");
-                if(x>=-(Math.pow(2, 31)) && x<=(Math.pow(2, 31)-1))System.out.println("* int");
-                if(x>=Long.MIN_VALUE && x<=Long.MAX_VALUE)System.out.println("* long");
-            }
-            catch(Exception e)
-            {
-                System.out.println(sc.next()+" can't be fitted anywhere.");
-            }
-
+        int lineNumber = 1;
+        
+        while (sc.hasNext()) {
+            String line = sc.nextLine();
+            System.out.println(lineNumber + " " + line);
+            lineNumber++;
         }
+        
+        sc.close();
     }
 }
-
-
-
